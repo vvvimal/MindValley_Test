@@ -1,0 +1,691 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60726D682307DA7D00758412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726D672307DA7D00758412 /* AppDelegate.swift */; };
+		60726D6D2307DA7D00758412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60726D6B2307DA7D00758412 /* Main.storyboard */; };
+		60726D6F2307DA7F00758412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60726D6E2307DA7F00758412 /* Assets.xcassets */; };
+		60726D722307DA7F00758412 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60726D702307DA7F00758412 /* LaunchScreen.storyboard */; };
+		60726D7D2307DA7F00758412 /* MindValley_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726D7C2307DA7F00758412 /* MindValley_TestTests.swift */; };
+		60726D882307DA7F00758412 /* MindValley_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726D872307DA7F00758412 /* MindValley_TestUITests.swift */; };
+		60726D9B23087B0800758412 /* PinterestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726D9A23087B0800758412 /* PinterestCollectionViewController.swift */; };
+		60726D9D23087B6C00758412 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726D9C23087B6C00758412 /* Extensions.swift */; };
+		60726D9F23087D1800758412 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726D9E23087D1800758412 /* AppConstants.swift */; };
+		60726DA123087FA100758412 /* PinterestCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DA023087FA100758412 /* PinterestCollectionViewModel.swift */; };
+		60726DA4230889FA00758412 /* ImageDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DA3230889FA00758412 /* ImageDetailModel.swift */; };
+		60726DA723088AC900758412 /* PinterestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DA623088AC900758412 /* PinterestCollectionViewCell.swift */; };
+		60726DAA23088B1F00758412 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DA923088B1F00758412 /* PinterestLayout.swift */; };
+		60726DAC23088B9600758412 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DAB23088B9600758412 /* NetworkManager.swift */; };
+		60726DAE23088C7700758412 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DAD23088C7700758412 /* BaseRequest.swift */; };
+		60726DB023088C9300758412 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DAF23088C9300758412 /* Reachability.swift */; };
+		60726DB223088D2700758412 /* ImageDetailFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DB123088D2700758412 /* ImageDetailFetchRequest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60726D792307DA7F00758412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60726D5C2307DA7D00758412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60726D632307DA7D00758412;
+			remoteInfo = MindValley_Test;
+		};
+		60726D842307DA7F00758412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60726D5C2307DA7D00758412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60726D632307DA7D00758412;
+			remoteInfo = MindValley_Test;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		60726D642307DA7D00758412 /* MindValley_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValley_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60726D672307DA7D00758412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		60726D6C2307DA7D00758412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		60726D6E2307DA7F00758412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		60726D712307DA7F00758412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		60726D732307DA7F00758412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60726D782307DA7F00758412 /* MindValley_TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValley_TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60726D7C2307DA7F00758412 /* MindValley_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValley_TestTests.swift; sourceTree = "<group>"; };
+		60726D7E2307DA7F00758412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60726D832307DA7F00758412 /* MindValley_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValley_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60726D872307DA7F00758412 /* MindValley_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValley_TestUITests.swift; sourceTree = "<group>"; };
+		60726D892307DA7F00758412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60726D9A23087B0800758412 /* PinterestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestCollectionViewController.swift; sourceTree = "<group>"; };
+		60726D9C23087B6C00758412 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		60726D9E23087D1800758412 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		60726DA023087FA100758412 /* PinterestCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestCollectionViewModel.swift; sourceTree = "<group>"; };
+		60726DA3230889FA00758412 /* ImageDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailModel.swift; sourceTree = "<group>"; };
+		60726DA623088AC900758412 /* PinterestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestCollectionViewCell.swift; sourceTree = "<group>"; };
+		60726DA923088B1F00758412 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		60726DAB23088B9600758412 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		60726DAD23088C7700758412 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		60726DAF23088C9300758412 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		60726DB123088D2700758412 /* ImageDetailFetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailFetchRequest.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60726D612307DA7D00758412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60726D752307DA7F00758412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60726D802307DA7F00758412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60726D5B2307DA7D00758412 = {
+			isa = PBXGroup;
+			children = (
+				60726D662307DA7D00758412 /* MindValley_Test */,
+				60726D7B2307DA7F00758412 /* MindValley_TestTests */,
+				60726D862307DA7F00758412 /* MindValley_TestUITests */,
+				60726D652307DA7D00758412 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60726D652307DA7D00758412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60726D642307DA7D00758412 /* MindValley_Test.app */,
+				60726D782307DA7F00758412 /* MindValley_TestTests.xctest */,
+				60726D832307DA7F00758412 /* MindValley_TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60726D662307DA7D00758412 /* MindValley_Test */ = {
+			isa = PBXGroup;
+			children = (
+				60726D672307DA7D00758412 /* AppDelegate.swift */,
+				60726DA823088AFF00758412 /* Layouts */,
+				60726D9623087AC300758412 /* Controllers */,
+				60726D9923087AC300758412 /* Models */,
+				60726D9723087AC300758412 /* Network */,
+				60726D9523087AC300758412 /* Utils */,
+				60726D9823087AC300758412 /* ViewModels */,
+				60726DA523088A9F00758412 /* Views */,
+				60726D6B2307DA7D00758412 /* Main.storyboard */,
+				60726D6E2307DA7F00758412 /* Assets.xcassets */,
+				60726D702307DA7F00758412 /* LaunchScreen.storyboard */,
+				60726D732307DA7F00758412 /* Info.plist */,
+			);
+			path = MindValley_Test;
+			sourceTree = "<group>";
+		};
+		60726D7B2307DA7F00758412 /* MindValley_TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				60726D7C2307DA7F00758412 /* MindValley_TestTests.swift */,
+				60726D7E2307DA7F00758412 /* Info.plist */,
+			);
+			path = MindValley_TestTests;
+			sourceTree = "<group>";
+		};
+		60726D862307DA7F00758412 /* MindValley_TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				60726D872307DA7F00758412 /* MindValley_TestUITests.swift */,
+				60726D892307DA7F00758412 /* Info.plist */,
+			);
+			path = MindValley_TestUITests;
+			sourceTree = "<group>";
+		};
+		60726D9523087AC300758412 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				60726D9C23087B6C00758412 /* Extensions.swift */,
+				60726D9E23087D1800758412 /* AppConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		60726D9623087AC300758412 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				60726D9A23087B0800758412 /* PinterestCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		60726D9723087AC300758412 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				60726DA22308895A00758412 /* RequestClasses */,
+				60726DAB23088B9600758412 /* NetworkManager.swift */,
+				60726DAF23088C9300758412 /* Reachability.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		60726D9823087AC300758412 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				60726DA023087FA100758412 /* PinterestCollectionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		60726D9923087AC300758412 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				60726DA3230889FA00758412 /* ImageDetailModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		60726DA22308895A00758412 /* RequestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				60726DAD23088C7700758412 /* BaseRequest.swift */,
+				60726DB123088D2700758412 /* ImageDetailFetchRequest.swift */,
+			);
+			path = RequestClasses;
+			sourceTree = "<group>";
+		};
+		60726DA523088A9F00758412 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60726DA623088AC900758412 /* PinterestCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		60726DA823088AFF00758412 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				60726DA923088B1F00758412 /* PinterestLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60726D632307DA7D00758412 /* MindValley_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60726D8C2307DA7F00758412 /* Build configuration list for PBXNativeTarget "MindValley_Test" */;
+			buildPhases = (
+				60726D602307DA7D00758412 /* Sources */,
+				60726D612307DA7D00758412 /* Frameworks */,
+				60726D622307DA7D00758412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindValley_Test;
+			productName = MindValley_Test;
+			productReference = 60726D642307DA7D00758412 /* MindValley_Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60726D772307DA7F00758412 /* MindValley_TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60726D8F2307DA7F00758412 /* Build configuration list for PBXNativeTarget "MindValley_TestTests" */;
+			buildPhases = (
+				60726D742307DA7F00758412 /* Sources */,
+				60726D752307DA7F00758412 /* Frameworks */,
+				60726D762307DA7F00758412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60726D7A2307DA7F00758412 /* PBXTargetDependency */,
+			);
+			name = MindValley_TestTests;
+			productName = MindValley_TestTests;
+			productReference = 60726D782307DA7F00758412 /* MindValley_TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		60726D822307DA7F00758412 /* MindValley_TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60726D922307DA7F00758412 /* Build configuration list for PBXNativeTarget "MindValley_TestUITests" */;
+			buildPhases = (
+				60726D7F2307DA7F00758412 /* Sources */,
+				60726D802307DA7F00758412 /* Frameworks */,
+				60726D812307DA7F00758412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60726D852307DA7F00758412 /* PBXTargetDependency */,
+			);
+			name = MindValley_TestUITests;
+			productName = MindValley_TestUITests;
+			productReference = 60726D832307DA7F00758412 /* MindValley_TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60726D5C2307DA7D00758412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Venugopalan, Vimal";
+				TargetAttributes = {
+					60726D632307DA7D00758412 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					60726D772307DA7F00758412 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 60726D632307DA7D00758412;
+					};
+					60726D822307DA7F00758412 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 60726D632307DA7D00758412;
+					};
+				};
+			};
+			buildConfigurationList = 60726D5F2307DA7D00758412 /* Build configuration list for PBXProject "MindValley_Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 60726D5B2307DA7D00758412;
+			productRefGroup = 60726D652307DA7D00758412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60726D632307DA7D00758412 /* MindValley_Test */,
+				60726D772307DA7F00758412 /* MindValley_TestTests */,
+				60726D822307DA7F00758412 /* MindValley_TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60726D622307DA7D00758412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60726D722307DA7F00758412 /* LaunchScreen.storyboard in Resources */,
+				60726D6F2307DA7F00758412 /* Assets.xcassets in Resources */,
+				60726D6D2307DA7D00758412 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60726D762307DA7F00758412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60726D812307DA7F00758412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60726D602307DA7D00758412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60726DAE23088C7700758412 /* BaseRequest.swift in Sources */,
+				60726DB223088D2700758412 /* ImageDetailFetchRequest.swift in Sources */,
+				60726DAC23088B9600758412 /* NetworkManager.swift in Sources */,
+				60726DA723088AC900758412 /* PinterestCollectionViewCell.swift in Sources */,
+				60726D682307DA7D00758412 /* AppDelegate.swift in Sources */,
+				60726D9D23087B6C00758412 /* Extensions.swift in Sources */,
+				60726DA123087FA100758412 /* PinterestCollectionViewModel.swift in Sources */,
+				60726DAA23088B1F00758412 /* PinterestLayout.swift in Sources */,
+				60726DB023088C9300758412 /* Reachability.swift in Sources */,
+				60726D9B23087B0800758412 /* PinterestCollectionViewController.swift in Sources */,
+				60726DA4230889FA00758412 /* ImageDetailModel.swift in Sources */,
+				60726D9F23087D1800758412 /* AppConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60726D742307DA7F00758412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60726D7D2307DA7F00758412 /* MindValley_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60726D7F2307DA7F00758412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60726D882307DA7F00758412 /* MindValley_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60726D7A2307DA7F00758412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60726D632307DA7D00758412 /* MindValley_Test */;
+			targetProxy = 60726D792307DA7F00758412 /* PBXContainerItemProxy */;
+		};
+		60726D852307DA7F00758412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60726D632307DA7D00758412 /* MindValley_Test */;
+			targetProxy = 60726D842307DA7F00758412 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		60726D6B2307DA7D00758412 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60726D6C2307DA7D00758412 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		60726D702307DA7F00758412 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60726D712307DA7F00758412 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		60726D8A2307DA7F00758412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		60726D8B2307DA7F00758412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60726D8D2307DA7F00758412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MindValley_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vimal.MindValley-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60726D8E2307DA7F00758412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MindValley_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vimal.MindValley-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		60726D902307DA7F00758412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MindValley_TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vimal.MindValley-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindValley_Test.app/MindValley_Test";
+			};
+			name = Debug;
+		};
+		60726D912307DA7F00758412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MindValley_TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vimal.MindValley-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindValley_Test.app/MindValley_Test";
+			};
+			name = Release;
+		};
+		60726D932307DA7F00758412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MindValley_TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vimal.MindValley-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MindValley_Test;
+			};
+			name = Debug;
+		};
+		60726D942307DA7F00758412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MindValley_TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Vimal.MindValley-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MindValley_Test;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60726D5F2307DA7D00758412 /* Build configuration list for PBXProject "MindValley_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60726D8A2307DA7F00758412 /* Debug */,
+				60726D8B2307DA7F00758412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60726D8C2307DA7F00758412 /* Build configuration list for PBXNativeTarget "MindValley_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60726D8D2307DA7F00758412 /* Debug */,
+				60726D8E2307DA7F00758412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60726D8F2307DA7F00758412 /* Build configuration list for PBXNativeTarget "MindValley_TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60726D902307DA7F00758412 /* Debug */,
+				60726D912307DA7F00758412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60726D922307DA7F00758412 /* Build configuration list for PBXNativeTarget "MindValley_TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60726D932307DA7F00758412 /* Debug */,
+				60726D942307DA7F00758412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60726D5C2307DA7D00758412 /* Project object */;
+}
