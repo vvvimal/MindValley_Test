@@ -26,37 +26,29 @@ extension NetworkManager {
     ///   - decodingType: the generic type for the model to be converted
     ///   - completion: completion handler for JSON conversion success or failure
     /// - Returns: return the session data task
-    func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
+    func decodingTask<T: Decodable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask? {
         
-        let task = session.dataTask(with: request) { data, response, error in
+        let task = CacheManager.shared().getData(session: session, request: request, completion: { data, response, error in
+            
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(nil, .requestFailed)
                 return
             }
-            
-            print("---------------------------")
-            print("URL:\(String(describing: response?.url?.absoluteString))")
-            print("data: \(String(describing: String(data: data!, encoding: String.Encoding.utf8)))")
-            print("---------------------------")
-            
             if httpResponse.statusCode == 200 {
                 if let dataObj = data{
                     do {
                         let genericModel = try JSONDecoder().decode(decodingType, from: dataObj)
                         completion(genericModel, nil)
                     } catch {
-                        print(error)
                         completion(nil, .jsonConversionFailure)
                     }
-                }
-                else{
+                } else {
                     completion(nil, .invalidData)
                 }
-                
             } else {
                 completion(nil, .responseUnsuccessful)
             }
-        }
+        })
         return task
     }
     
@@ -68,7 +60,6 @@ extension NetworkManager {
     ///   - completion: closure to return the result
     func fetch<T: Decodable>(with request: URLRequest, decode: @escaping (Decodable) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
         if Reachability.isConnectedToNetwork(){
-            
             let task = decodingTask(with: request, decodingType: T.self) { (json , error) in
                 
                 //MARK: change to main queue
@@ -88,10 +79,31 @@ extension NetworkManager {
                     }
                 }
             }
-            task.resume()
+            task?.resume()
         }
         else{
             completion(.failure(.noInternetError))
         }
+    }
+    
+    /// Download image with url request
+    ///
+    /// - Parameters:
+    ///   - request: URL request object
+    ///   - completion: closure to return the result
+    func downloadImage(with request: URLRequest, completion: @escaping (Result<UIImage?, APIError>) -> Void) {
+        let task = CacheManager.shared().getData(session: session, request: request, completion: { data, response, error in
+            
+            if error == nil, let usableData = data {
+                if let image = UIImage.init(data: usableData as Data){
+                    completion(.success(image))
+                }
+            }
+            else if error != nil {
+                completion(.failure(.invalidData))
+            }
+        })
+        task?.resume()
+        
     }
 }

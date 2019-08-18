@@ -24,6 +24,8 @@
 		60726DAE23088C7700758412 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DAD23088C7700758412 /* BaseRequest.swift */; };
 		60726DB023088C9300758412 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DAF23088C9300758412 /* Reachability.swift */; };
 		60726DB223088D2700758412 /* ImageDetailFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DB123088D2700758412 /* ImageDetailFetchRequest.swift */; };
+		60726DB4230949BE00758412 /* ImageDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DB3230949BE00758412 /* ImageDownloadRequest.swift */; };
+		60726DB623094A8900758412 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DB523094A8900758412 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		60726DAD23088C7700758412 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		60726DAF23088C9300758412 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		60726DB123088D2700758412 /* ImageDetailFetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailFetchRequest.swift; sourceTree = "<group>"; };
+		60726DB3230949BE00758412 /* ImageDownloadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadRequest.swift; sourceTree = "<group>"; };
+		60726DB523094A8900758412 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 				60726DA22308895A00758412 /* RequestClasses */,
 				60726DAB23088B9600758412 /* NetworkManager.swift */,
 				60726DAF23088C9300758412 /* Reachability.swift */,
+				60726DB523094A8900758412 /* CacheManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			children = (
 				60726DAD23088C7700758412 /* BaseRequest.swift */,
 				60726DB123088D2700758412 /* ImageDetailFetchRequest.swift */,
+				60726DB3230949BE00758412 /* ImageDownloadRequest.swift */,
 			);
 			path = RequestClasses;
 			sourceTree = "<group>";
@@ -356,8 +362,10 @@
 				60726DA723088AC900758412 /* PinterestCollectionViewCell.swift in Sources */,
 				60726D682307DA7D00758412 /* AppDelegate.swift in Sources */,
 				60726D9D23087B6C00758412 /* Extensions.swift in Sources */,
+				60726DB623094A8900758412 /* CacheManager.swift in Sources */,
 				60726DA123087FA100758412 /* PinterestCollectionViewModel.swift in Sources */,
 				60726DAA23088B1F00758412 /* PinterestLayout.swift in Sources */,
+				60726DB4230949BE00758412 /* ImageDownloadRequest.swift in Sources */,
 				60726DB023088C9300758412 /* Reachability.swift in Sources */,
 				60726D9B23087B0800758412 /* PinterestCollectionViewController.swift in Sources */,
 				60726DA4230889FA00758412 /* ImageDetailModel.swift in Sources */,

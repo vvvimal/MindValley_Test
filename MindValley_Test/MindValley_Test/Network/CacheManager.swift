@@ -1,0 +1,89 @@
+//
+//  CacheManager.swift
+//  MindValley_Test
+//
+//  Created by Venugopalan, Vimal on 18/08/19.
+//  Copyright © 2019 Venugopalan, Vimal. All rights reserved.
+//
+
+import UIKit
+
+fileprivate let dataCache = NSCache<AnyObject, AnyObject>()
+
+class CacheManager {
+    
+    private static var sharedInstance:CacheManager!
+    
+    /// singleton instance of cachemanager
+    ///
+    /// - Parameters:
+    ///   - costLimit: cost limit of the data cached
+    ///   - countLimit: count limit of the data cached
+    ///   - isDiscardableContent: is content discardable
+    /// - Returns: CacheManager object
+    static func shared(costLimit:Int? = nil, countLimit:Int? = nil, isDiscardableContent:Bool? = false) -> CacheManager{
+        if sharedInstance != nil{
+            return sharedInstance
+        }
+        else{
+            sharedInstance = CacheManager()
+            if let costValue = costLimit {
+                dataCache.totalCostLimit = costValue
+            }
+            if let countValue = countLimit{
+                dataCache.countLimit = countValue
+            }
+            if let discardFlag = isDiscardableContent{
+                dataCache.evictsObjectsWithDiscardedContent = discardFlag
+            }
+            return sharedInstance
+        }
+    }
+    
+    private init() {
+        
+    }
+    
+    /// Set object for key
+    ///
+    /// - Parameters:
+    ///   - data: data set in cache
+    ///   - key: string representing url
+    private func setObject(data:Data, forKey key:String){
+        dataCache.setObject(data as AnyObject, forKey: key as AnyObject)
+    }
+    
+    /// Get object for key
+    ///
+    /// - Parameter key: string representing the url
+    /// - Returns: Data from cache
+    private func object(forKey key:String) -> Data?{
+        return dataCache.object(forKey: key as AnyObject) as? Data
+    }
+    
+    /// Get Data for request object
+    ///
+    /// - Parameters:
+    ///   - session: URLSession object for data task
+    ///   - request: URLRequest object
+    ///   - completion: completion handler
+    /// - Returns: URLSessionDataTask if no data in cache
+    func getData(session:URLSession, request: URLRequest, completion: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error? ) -> Void) -> URLSessionDataTask? {
+        if let urlString = request.url?.absoluteString{
+            if let data = CacheManager.shared().object(forKey: urlString) {
+                completion(data, nil, nil)
+            } else {
+                let task = session.dataTask(with: request, completionHandler: { data, response, error in
+                    if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                        if let dataObj = data, error == nil {
+                            CacheManager.shared().setObject(data: dataObj, forKey: urlString)
+                        }
+                    }
+                    completion(data, response, error)
+                })
+                return task
+            }
+        }
+        return nil
+    }
+}
