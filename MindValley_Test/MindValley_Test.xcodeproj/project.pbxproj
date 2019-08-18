@@ -26,6 +26,7 @@
 		60726DB223088D2700758412 /* ImageDetailFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DB123088D2700758412 /* ImageDetailFetchRequest.swift */; };
 		60726DB4230949BE00758412 /* ImageDownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DB3230949BE00758412 /* ImageDownloadRequest.swift */; };
 		60726DB623094A8900758412 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DB523094A8900758412 /* CacheManager.swift */; };
+		60726DB82309A76B00758412 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60726DB72309A76B00758412 /* NetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		60726DB123088D2700758412 /* ImageDetailFetchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailFetchRequest.swift; sourceTree = "<group>"; };
 		60726DB3230949BE00758412 /* ImageDownloadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadRequest.swift; sourceTree = "<group>"; };
 		60726DB523094A8900758412 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		60726DB72309A76B00758412 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			children = (
 				60726D7C2307DA7F00758412 /* MindValley_TestTests.swift */,
 				60726D7E2307DA7F00758412 /* Info.plist */,
+				60726DB72309A76B00758412 /* NetworkManagerTests.swift */,
 			);
 			path = MindValley_TestTests;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60726DB82309A76B00758412 /* NetworkManagerTests.swift in Sources */,
 				60726D7D2307DA7F00758412 /* MindValley_TestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

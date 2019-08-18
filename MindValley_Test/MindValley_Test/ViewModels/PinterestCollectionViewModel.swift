@@ -26,7 +26,6 @@ class PinterestCollectionViewModel: NSObject {
                 self?.imageArray = imageList ?? []
                 completion(true, nil)
                 break
-                
             case .failure(let error):
                 completion(false, error)
                 break
@@ -80,7 +79,6 @@ extension PinterestCollectionViewModel: UICollectionViewDelegate, UICollectionVi
         
         if let imageDetail = self.imageAtIndexPath(indexPath) {
             cell.imageDetail = imageDetail
-            return cell
         }
         return cell
     }

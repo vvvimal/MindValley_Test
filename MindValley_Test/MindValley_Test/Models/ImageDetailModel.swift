@@ -53,27 +53,20 @@ class ImageDetailModel: Decodable{
         self.categories = try container.decode([CategoryDetailModel].self, forKey: .categories)
         self.links = try container.decode([String:String].self, forKey: .links)
         
-        
-        
-        
         let dateFormatter = DateFormatter.init()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ" //2016-05-29T15:42:02-04:00
         let dateString = try container.decode(String.self, forKey: .createdAt)
         if let date = dateFormatter.date(from: dateString) {
             self.createdAt = date
         } else {
-            throw DecodingError.dataCorruptedError(forKey: .createdAt,
-                                                   in: container,
-                                                   debugDescription: "Date string does not match format expected by formatter.")
+            throw DecodingError.dataCorruptedError(forKey: .createdAt, in: container, debugDescription: "Date string does not match format expected by formatter.")
         }
         
         let colorString = try container.decode(String.self, forKey: .color)
         if let color = UIColor.init(hex: colorString) {
             self.color = color
         } else {
-            throw DecodingError.dataCorruptedError(forKey: .color,
-                                                   in: container,
-                                                   debugDescription: "Color string gives an error")
+            throw DecodingError.dataCorruptedError(forKey: .color, in: container, debugDescription: "Color string gives an error")
         }
     }
 }

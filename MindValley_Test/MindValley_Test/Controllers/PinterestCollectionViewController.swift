@@ -18,18 +18,20 @@ class PinterestCollectionViewController: UICollectionViewController {
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
-        
         self.setupView()
         self.setupCollectionView()
-        
-        
+        self.getImageDetail()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        viewModel.getImageDetailList(completion: { success, error in
-            self.reloadCollectionView()
-            
+    func getImageDetail(){
+        self.activityStartAnimating()
+        viewModel.getImageDetailList(completion: {[weak self] success, error in
+            if let errorObj = error{
+                self?.setError(error: errorObj)
+            }
+            else{
+                self?.reloadCollectionView()
+            }
         })
     }
     
@@ -57,7 +59,6 @@ class PinterestCollectionViewController: UICollectionViewController {
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: UIControl.Event.valueChanged)
         self.collectionView.addSubview(self.refreshControl)
-        
     }
     
     //MARK: Actions
@@ -67,11 +68,7 @@ class PinterestCollectionViewController: UICollectionViewController {
     /// - Parameter sender: UIRefreshControl object
     @objc func refresh(sender:AnyObject) {
         // Code to refresh collection view
-        self.activityStartAnimating()
-        viewModel.getImageDetailList(completion: { success, error in
-            self.reloadCollectionView()
-            
-        })
+        self.getImageDetail()
     }
 }
 
@@ -84,7 +81,6 @@ extension PinterestCollectionViewController{
             self.collectionView.reloadData()
             self.refreshControl?.endRefreshing()
         }
-        
     }
     
     /// show error received from API

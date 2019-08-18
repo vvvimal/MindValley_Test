@@ -10,7 +10,7 @@ import UIKit
 
 struct ImageDownloadRequest: BaseRequest {
     var urlString: String = ""
-    public init(urlString: String) {
+    init(urlString: String) {
         self.urlString = urlString
     }
 }
